@@ -1,0 +1,24 @@
+{
+  "name": "Smart-Watch-Winder",
+  "version": "1.0.0",
+  "description": "A watch winder that is smart. Not a winder for smart watches.  A front-end, back-end API and embedded programming components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thehiderofkeys/Smart-Watch-Winder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thehiderofkeys/Smart-Watch-Winder/issues"
+  },
+  "homepage": "https://github.com/thehiderofkeys/Smart-Watch-Winder#readme",
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-config-google": "^0.14.0"
+  }
+}
