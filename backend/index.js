@@ -22,6 +22,10 @@ const sockets = socketIO(server);
 
 sockets.on('connection', (socket) => {
   console.log('connected');
+  socket.on('mac address', (data) => {
+    console.log('authenticate');
+    socket.emit('event', 'CODE: 5555');
+  });
 });
 
 server.listen(PORT, () => {
