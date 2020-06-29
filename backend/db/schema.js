@@ -19,6 +19,7 @@ const winderSettingSchema = new Schema({
   enabled: {type: Boolean, required: true, default: false},
   startTime: {type: String, required: true, default: '00:00'},
   endTime: {type: String, required: true, default: '23:59'},
+  tpd: {type: Number, required: true},
   direction: {type: String, required: true, enum: ['Left', 'Right', 'Both'], default: 'Both'},
   totalCount: {type: Number, required: true, default: 0},
   dailyCount: {type: Number, required: true, default: 0},
@@ -60,6 +61,9 @@ export const Watch = mongoose.model('Watch', watchSchema);
 const movementSchema = new Schema({
   manufature: {type: Schema.Types.ObjectId, ref: 'Manufature', required: true},
   caliber: {type: String, required: true},
+  tpd: {type: Number, required: true},
+  direction: {type: String, required: true, enum: ['Left', 'Right', 'Both'], default: 'Both'},
+  bph: {type: Number, required: true},
 });
 
 export const Movement = mongoose.model('Movement', movementSchema);
