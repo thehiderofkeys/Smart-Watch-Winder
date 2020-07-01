@@ -33,7 +33,6 @@ const userSchema = new Schema({
   googleId: {type: String, unique: true, required: true},
   firstName: {type: String, required: true},
   lastName: {type: String},
-  email: {type: String, unique: true, required: true},
 });
 
 export const User = mongoose.model('User', userSchema);
