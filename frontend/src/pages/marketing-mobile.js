@@ -34,7 +34,9 @@ function MobileMarketingPage() {
             <CardContent>
               <Typography variant='h6' > A watch winder that&apos;s smart. </Typography>
               <Typography variant='body2'> Not a winder for your smart watch. </Typography>
-              <Typography variant='body2'>This winder is connected to the internet, so you can control your winder, wherever you are.</Typography>
+              <Typography variant='body2'>
+                  This winder is connected to the internet, so you can control your winder, wherever you are.
+              </Typography>
             </CardContent>
           </Card>
         </Grid>
