@@ -1,21 +1,29 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
-import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+import {Hidden} from '@material-ui/core';
+import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/core/styles';
 
 import MarketingPage from './pages/marketing';
+import MobileMarketingPage from './pages/marketing-mobile';
 /**
  * The top level component of the app.
  * @return {JSX} the JSX component
  */
 function App() {
+  const rtheme = responsiveFontSizes(theme);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={rtheme}>
       <Router>
         <Switch>
           <Route exact path="/">
-            <MarketingPage/>
+            <Hidden xsDown>
+              <MarketingPage/>
+            </Hidden>
+            <Hidden smUp>
+              <MobileMarketingPage/>
+            </Hidden>
           </Route>
         </Switch>
       </Router>
