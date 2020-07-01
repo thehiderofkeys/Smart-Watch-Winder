@@ -1,6 +1,8 @@
-import {google} from 'googleapis';
+import googleapis from 'googleapis';
 import fs from 'fs';
 import {User} from '../db/schema';
+
+const {google} = googleapis;
 
 const PRODUCTION = process.env.NODE_ENV === 'production';
 const cred = JSON.parse(process.env.GOOGLE_CRED? process.env.GOOGLE_CRED:fs.readFileSync('./credentials.json'));
