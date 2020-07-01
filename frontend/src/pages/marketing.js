@@ -2,8 +2,8 @@ import React from 'react';
 
 import {Container, Grid, makeStyles} from '@material-ui/core';
 
-import {ReactComponent as WordMark} from '../WordMark.svg';
-import Mockup from '../Mockup.png';
+import {ReactComponent as WordMark} from '../images/WordMark.svg';
+import WinderAndMockup from '../images/WinderAndMockup.png';
 
 /**
  * @return {JSX} JSX element for the marketing page.
@@ -19,7 +19,7 @@ function MarketingPage() {
           <div className={classes.wordMarkBackground}/>
         </Grid>
         <Grid item xs={9}>
-          <img src={Mockup} className={classes.mockup}/>
+          <img src={WinderAndMockup} className={classes.mockup}/>
         </Grid>
       </Grid>
     </Container>
