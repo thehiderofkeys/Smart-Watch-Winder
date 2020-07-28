@@ -1,6 +1,6 @@
 import {loginThunk, logoutThunk} from '../actions';
 
-INIT_STATE={
+const INIT_STATE={
   loadingLogin: false,
   loadingLogout: false,
 };
@@ -38,7 +38,7 @@ export default function(state = INIT_STATE, action) {
  * @return {Object} Shallow copy of the new state
  */
 function requestUrlReducer(state, action, actionTypes) {
-  if (action.type = actionTypes.success) {
+  if (action.type === actionTypes.success) {
     action.payload.success(action.payload.responce);
   }
   return Object.assign({}, state, {loadingLogin: action.type = actionTypes.loading});
