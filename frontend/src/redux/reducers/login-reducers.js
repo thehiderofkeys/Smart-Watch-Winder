@@ -39,7 +39,9 @@ export default function(state = INIT_STATE, action) {
  */
 function requestUrlReducer(state, action, actionTypes) {
   if (action.type === actionTypes.success) {
-    action.payload.success(action.payload.responce);
+    action.payload.text().then(url=>{
+      window.location.href = url;
+    })
   }
   return Object.assign({}, state, {loadingLogin: action.type === actionTypes.loading});
 }

@@ -6,7 +6,7 @@
  */
 export async function login(onSuccess) {
   const res = await fetch('/api/login');
-  return {respose: res, success: onSuccess};
+  return res;
 }
 
 /**
@@ -17,5 +17,5 @@ export async function login(onSuccess) {
  */
 export async function logout(onSuccess) {
   const res = await fetch('/api/logout');
-  return {respose: res, success: onSuccess};
+  return res;
 }
