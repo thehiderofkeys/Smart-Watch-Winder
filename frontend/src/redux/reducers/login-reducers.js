@@ -41,5 +41,5 @@ function requestUrlReducer(state, action, actionTypes) {
   if (action.type === actionTypes.success) {
     action.payload.success(action.payload.responce);
   }
-  return Object.assign({}, state, {loadingLogin: action.type = actionTypes.loading});
+  return Object.assign({}, state, {loadingLogin: action.type === actionTypes.loading});
 }
