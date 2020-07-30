@@ -1,9 +1,10 @@
 import React from 'react';
 
-import {Container, Grid, Typography, Button, makeStyles} from '@material-ui/core';
+import {Container, Grid, Typography, makeStyles} from '@material-ui/core';
 
 import {ReactComponent as WordMark} from '../images/WordMark.svg';
 import WinderAndMockup from '../images/WinderAndMockup.png';
+import LoginButton from '../component/login-button';
 
 /**
  * @return {JSX} JSX element for the marketing page.
@@ -34,7 +35,7 @@ function MarketingPage() {
         </Grid>
         <Grid item xs={3}/>
         <Grid item xs={9}>
-          <Button variant="contained" color="secondary">Take it for a spin!</Button>
+          <LoginButton buttonText='Take it for a Spin!'/>
         </Grid>
       </Grid>
     </Container>
