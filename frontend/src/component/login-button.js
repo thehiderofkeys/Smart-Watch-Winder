@@ -8,33 +8,22 @@ import { loginThunk } from '../redux/actions';
 class LoginButton extends React.Component {
 
     render() {
-        const {buttonText, login, classes, dispatchLoginRequest} = this.props;
+        const {buttonText, login, classes, dispatchLoginRequest, style} = this.props;
         return (
-            <div className={classes.root}>
-                <div className={classes.wrapper}>
-                    <Button
-                        variant="contained"
-                        color="secondary"
-                        disabled={login.loadingLogin}
-                        onClick={dispatchLoginRequest}
-                    >
-                        {buttonText}
-                    </Button>
-                    {login.loadingLogin && <CircularProgress size={24} className={classes.buttonProgress}/>}
-                </div>
-            </div>
+            <Button
+                variant="contained"
+                color="secondary"
+                disabled={login.loadingLogin}
+                onClick={dispatchLoginRequest}
+                style={style}
+            >
+                {buttonText}
+                {login.loadingLogin && <CircularProgress size={24} className={classes.buttonProgress}/>}
+            </Button>
         )
     }
 }
 const styles = theme => ({
-    root: {
-        display: 'flex',
-        alignItems: 'center',
-    },
-    wrapper: {
-        margin: theme.spacing(1),
-        position: 'relative',
-    },
     buttonProgress: {
         position: 'absolute',
         top: '50%',
