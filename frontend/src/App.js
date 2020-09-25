@@ -6,6 +6,7 @@ import {createMuiTheme, ThemeProvider, responsiveFontSizes} from '@material-ui/c
 
 import MarketingPage from './pages/marketing';
 import MobileMarketingPage from './pages/marketing-mobile';
+import Dashboard from './pages/dashboard';
 /**
  * The top level component of the app.
  * @return {JSX} the JSX component
@@ -24,6 +25,9 @@ function App() {
             <Hidden smUp>
               <MobileMarketingPage/>
             </Hidden>
+          </Route>
+          <Route exact path="/dashboard">
+            <Dashboard/>
           </Route>
         </Switch>
       </Router>
